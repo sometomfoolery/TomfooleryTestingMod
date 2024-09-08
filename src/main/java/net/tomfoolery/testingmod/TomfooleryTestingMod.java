@@ -1,6 +1,7 @@
 package net.tomfoolery.testingmod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -13,6 +14,8 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.tomfoolery.testingmod.item.ModCreativeModeTabs;
+import net.tomfoolery.testingmod.item.ModItems;
 import org.slf4j.Logger;
 
 @Mod(TomfooleryTestingMod.MOD_ID)
@@ -24,6 +27,11 @@ public class TomfooleryTestingMod
     public TomfooleryTestingMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -38,7 +46,11 @@ public class TomfooleryTestingMod
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)
+        {
+            event.accept(ModItems.RUBY);
+            event.accept(ModItems.RAW_RUBY);
+        }
     }
 
     @SubscribeEvent
