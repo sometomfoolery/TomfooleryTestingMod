@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures":
+  {
+    "all": "tomfoolerytesting:block/raw_ruby_block"
+  }
+}

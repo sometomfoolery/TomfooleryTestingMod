@@ -2,5 +2,8 @@
   "item.tomfoolerytesting.ruby": "Ruby",
   "item.tomfoolerytesting.raw_ruby": "Raw Ruby",
 
+  "block.tomfoolerytesting.ruby_block": "Block of Ruby",
+  "block.tomfoolerytesting.raw_ruby_block": "Block of Raw Ruby",
+
   "creativetab.testing_tab": "Test Items"
 }

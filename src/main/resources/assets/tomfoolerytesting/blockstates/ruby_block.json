@@ -1,0 +1,9 @@
+{
+  "variants":
+  {
+    "":
+    {
+      "model": "tomfoolerytesting:block/ruby_block"
+    }
+  }
+}

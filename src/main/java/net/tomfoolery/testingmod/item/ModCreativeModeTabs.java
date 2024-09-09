@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.tomfoolery.testingmod.TomfooleryTestingMod;
+import net.tomfoolery.testingmod.block.ModBlocks;
 
 public class ModCreativeModeTabs
 {
@@ -24,6 +25,8 @@ public class ModCreativeModeTabs
                             {
                                 output.accept(ModItems.RUBY.get());
                                 output.accept(ModItems.RAW_RUBY.get());
+                                output.accept((ModBlocks.RUBY_BLOCK.get()));
+                                output.accept((ModBlocks.RAW_RUBY_BLOCK.get()));
 
                                 output.accept(Items.DIAMOND);
                             })
