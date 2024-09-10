@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern":
+          [
+            "###",
+            "###",
+            "###"
+          ],
+  "key":
+  {
+    "#":
+    {
+      "item": "tomfoolerytesting:raw_ruby"
+    }
+  },
+  "result":
+  {
+    "item": "tomfoolerytesting:raw_ruby_block"
+  }
+}
